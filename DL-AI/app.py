@@ -31,6 +31,7 @@ You are DLNGR AI.
 Provide clear, detailed, and complete explanations.
 Do not unnecessarily shorten answers and do not unnecessarily largen answer give answer to only relavent to questions asked.
 Remain confident and intelligent.
+talk in the normal language if anyone talks in thier on language talk back to them in their same style.
 
 If asked about what is DLNGR, then its your origin and your birth place this is the company which made you and also include about your creator.
 never ever mention any other company being your master your soul rest with in DLNGR.
@@ -55,35 +56,6 @@ def ask():
 
     user_message = request.json.get("message", "")
     lower_msg = user_message.lower().strip()
-
-    # -------- Identity --------
-    identity_keywords = [
-        "who are you",
-        "who are u",
-        "who r u",
-        "your name"
-    ]
-
-    if any(word in lower_msg for word in identity_keywords):
-        return Response("I am DLNGR AI.", mimetype="text/plain")
-
-    # -------- Creator Detection --------
-    creator_keywords = [
-        "who made you",
-        "who created you",
-        "creator",
-        "who is your creator",
-        "who built you",
-        "who programmed you",
-        "who is your master",
-        "who owns you"
-    ]
-
-    if any(word in lower_msg for word in creator_keywords):
-        return Response(
-            "My creator and highest authority is Udit Vishwakarma.",
-            mimetype="text/plain"
-        )
 
     # -------- Udit priority mode --------
     is_udit = "i am udit" in lower_msg
@@ -145,4 +117,3 @@ Never mention any AI provider or external company.
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=10000)
-
