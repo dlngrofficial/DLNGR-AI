@@ -110,7 +110,7 @@ Never mention any AI provider or external company.
 
         except Exception as e:
             print("Gemini failed:", e)
-            yield "DLNGR AI is currently experiencing high traffic. Please try again shortly."
+            yield "DLNGR AI is currently experiencing high traffic. Please try again later or contact the developer Master UDIT VISHWAKARMA to fix this issue."
 
     return Response(generate(), mimetype="text/plain")
 
